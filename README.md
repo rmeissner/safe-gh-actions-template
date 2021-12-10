@@ -12,12 +12,16 @@ The template includes the use of the following GitHub actions:
 
 ### Set up
 
-The following secrets should be set on your GitHub repository:
+1. Fork the repository and rename to your liking
+
+2. The following secrets should be set on your GitHub repository:
 
 - `PERSONAL_ACCESS_TOKEN` - [GitHub access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token), used to trigger sub flows
 - `TARGET_SAFE` - Checksummed address of the Safe to monitor
 - `JSON_RPC_NODE` - Ethereum JSON RPC endpoint (e.g. [Infura](https://infura.io/dashboard))
 - `SERVICE_URL` - URL of the Safe service to monitor (defaults to `https://safe-transaction.mainnet.gnosis.io/`)
+
+3. Enabled the workflows in the `Actions` tab 
 
 
 ### Workflows
