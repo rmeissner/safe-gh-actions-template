@@ -1,0 +1,17 @@
+name: "Snapshot Sync"
+on:
+  schedule:
+    - cron: '* * * * *'
+  workflow_dispatch:
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Snapshot Sync"
+        uses: rmeissner/safe-snapshot-monitor-gh-action@main
+        env:
+          PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        with:
+          safe-address: ${{ secrets.TARGET_SAFE }}
+          snapshot-space: ${{ secrets.SNAPSHOT_SPACE }}
