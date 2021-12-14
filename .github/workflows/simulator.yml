@@ -21,3 +21,4 @@ jobs:
           fail-on-safe-storage-changes: 'true'
           show-info: 'true'
           simulate-tx: 'true'
+          verbose: 'true'
